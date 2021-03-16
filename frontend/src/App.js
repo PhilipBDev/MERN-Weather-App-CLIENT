@@ -1,7 +1,9 @@
+import Card from './components/weather/Card';
+
 const App = () => {
   return (
     <div className="title">
-      <p>Weather App</p>
+      <Card />
     </div>
   );
 };
