@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = () => {
+const CardContainer = () => {
   return (
     <div class="container">
       <p>card location</p>
@@ -8,4 +8,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default CardContainer;
