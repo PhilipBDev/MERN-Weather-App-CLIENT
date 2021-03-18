@@ -1,9 +1,11 @@
-import React from 'react';
+// Layout/Edit/Delete
+
+import LocationForm from '../site/LocationForm';
 
 const CardContainer = () => {
   return (
-    <div class="container">
-      <p>card location</p>
+    <div>
+      <h1>I am a card!</h1>
     </div>
   );
 };
