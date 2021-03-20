@@ -4,16 +4,15 @@ import styled from 'styled-components';
 const NavBar = () => {
   return (
     <Nav>
-      <Title>Weather App</Title>
       <Ul>
         <Li>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </Li>
         <Li>
-          <Link to="/login">Login</Link>
+          <NavLink to="/login">Login</NavLink>
         </Li>
         <Li>
-          <Link to="/register">Register</Link>
+          <NavLink to="/register">Register</NavLink>
         </Li>
       </Ul>
     </Nav>
@@ -30,25 +29,27 @@ const Nav = styled.nav`
   padding: 0 4rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #009ad6;
-
+  align-items: flex-end;
   @media (max-width: 500px) {
     padding: 1rem 1.5rem;
   }
 `;
 
-const Title = styled.h1`
-  font-weight: bold;
-  font-size: 1.5rem;
-`;
-
 const Ul = styled.ul`
   padding: 0rem 0.6rem;
-  display: flex;
+  display: inline;
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
+  margin-left: auto;
+`;
+
+const NavLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: grey;
+  }
 `;
 
 const Li = styled.li`
