@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import GlobalStyle from './elements/GlobalStyle';
 import styled from 'styled-components';
 import img from './public/images/background.jpg';
 
@@ -12,16 +14,19 @@ import Footer from './components/site/Footer';
 
 const App = () => {
   return (
-    <Router>
-      <Background>
-        <NavBar />
-        <Route exact path="/" component={LocationForm} />
-        <Route exact path="/" component={CardList} />
-        {/* <Route path="/login" component={Login} />
+    <>
+      <Router>
+        <GlobalStyle />
+        <Background>
+          <NavBar />
+          <Route exact path="/" component={LocationForm} />
+          <Route exact path="/" component={CardList} />
+          {/* <Route path="/login" component={Login} />
         <Route path="/register" component={Register} /> */}
-        <Footer />
-      </Background>
-    </Router>
+          <Footer />
+        </Background>
+      </Router>
+    </>
   );
 };
 
@@ -36,9 +41,9 @@ const Background = styled.div`
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   width: 100vw;
-  margin: 0;
-  padding: 0;
+  z-index: 0;
   overflow: hidden;
 `;

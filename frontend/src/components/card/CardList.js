@@ -24,4 +24,8 @@ const List = styled.div`
   justify-content: center;
   text-align: center;
   margin: 2rem;
+  @media (max-height: 400px) {
+    bottom: 10vh;
+    positon: fixed;
+  }
 `;

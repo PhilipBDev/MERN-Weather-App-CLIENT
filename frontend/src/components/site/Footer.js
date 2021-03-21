@@ -19,16 +19,14 @@ export default Footer;
 //===================
 
 const Foot = styled.footer`
-  margin-top: 1rem;
-  position: fixed;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   font-weight: bold;
-  bottom: 0;
+  position: fixed;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  @media (max-width: 500px) {
-    padding: 1rem 1.5rem;
-  }
 `;
 
 const FooterText = styled.p`

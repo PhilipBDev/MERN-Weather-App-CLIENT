@@ -9,16 +9,18 @@ const LocationForm = () => {
   };
 
   return (
-    <Form>
-      <Title>Weather App</Title>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          name="location"
-          placeholder="Type zip code or city here.."
-        />
-      </form>
-    </Form>
+    <Container>
+      <Form>
+        <Title>Weather App</Title>
+        <form onSubmit={onSubmit}>
+          <input
+            type="text"
+            name="location"
+            placeholder="Type zip code or city here.."
+          />
+        </form>
+      </Form>
+    </Container>
   );
 };
 
@@ -27,6 +29,20 @@ export default LocationForm;
 //===================
 // Styled-Components
 //===================
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  @media (max-height: 400px) {
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 0);
+  }
+`;
 
 const Title = styled.h1`
   font-weight: bold;
@@ -41,7 +57,4 @@ const Form = styled.div`
   text-align: center;
   font-weight: bold;
   width: 100%;
-  @media (max-width: 500px) {
-    padding: 1rem 1.5rem;
-  }
 `;
