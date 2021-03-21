@@ -22,7 +22,7 @@ const Card = styled.div`
   border: 1px solid #fff;
   box-sizing: border-box;
   border-radius: 1rem;
-  background-color: rgba(52, 99, 140, 0.5);
+  background-color: rgba(52, 99, 140, 0.8);
 `;
 
 const CardText = styled.h1`

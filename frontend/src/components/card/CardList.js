@@ -24,8 +24,14 @@ const List = styled.div`
   justify-content: center;
   text-align: center;
   margin: 2rem;
+  transition: transform 0.5s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
   @media (max-height: 400px) {
+    font-weight: bold;
+    position: fixed;
     bottom: 10vh;
-    positon: fixed;
+    width: 80vw;
   }
 `;

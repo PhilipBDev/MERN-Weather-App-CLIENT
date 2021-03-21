@@ -26,10 +26,9 @@ export default NavBar;
 //===================
 
 const Nav = styled.nav`
-  padding: 0 4rem;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  margin-top: 0.5rem;
   @media (max-width: 500px) {
     padding: 1rem 1.5rem;
   }
@@ -37,11 +36,11 @@ const Nav = styled.nav`
 
 const Ul = styled.ul`
   padding: 0rem 0.6rem;
-  display: inline;
+  display: flex;
   justify-content: space-evenly;
-  align-items: center;
   list-style: none;
-  margin-left: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
 `;
 
 const NavLink = styled(Link)`
@@ -55,8 +54,9 @@ const NavLink = styled(Link)`
 const Li = styled.li`
   padding: 0.3rem;
   margin: 0rem 0.2rem;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 700;
+  text-shadow: 1px 1px #000;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
   user-select: none;

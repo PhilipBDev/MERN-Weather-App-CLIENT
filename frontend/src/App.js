@@ -46,4 +46,5 @@ const Background = styled.div`
   width: 100vw;
   z-index: 0;
   overflow: hidden;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 `;

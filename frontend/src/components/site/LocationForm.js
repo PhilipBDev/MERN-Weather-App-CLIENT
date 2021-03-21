@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const LocationForm = () => {
   const onSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
   };
 
   return (
@@ -20,6 +20,7 @@ const LocationForm = () => {
           />
         </form>
       </Form>
+      <Btn type="submit">Submit</Btn>
     </Container>
   );
 };
@@ -46,15 +47,28 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 36px;
   color: #fff;
   text-shadow: 2px 2px #000;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const Form = styled.div`
-  margin-top: 1rem;
+  margin-top: 5rem;
   text-align: center;
   font-weight: bold;
   width: 100%;
+`;
+
+const Btn = styled.button`
+  background-color: #fff;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  &:hover {
+    opacity: 0.7;
+  }
 `;
