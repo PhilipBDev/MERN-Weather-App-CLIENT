@@ -23,11 +23,7 @@ const List = styled.div`
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  margin: 2rem;
-  transition: transform 0.5s ease;
-  &:hover {
-    transform: scale(1.2);
-  }
+  margin: 1rem;
   @media (max-height: 400px) {
     font-weight: bold;
     position: fixed;

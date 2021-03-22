@@ -2,6 +2,7 @@
 // Location, Image, Temp
 
 import styled from 'styled-components';
+import { Location } from '@styled-icons/evil/Location';
 
 const LocationForm = () => {
   const onSubmit = (e) => {
@@ -20,6 +21,7 @@ const LocationForm = () => {
           />
         </form>
       </Form>
+      <Geolocation></Geolocation>
       <Btn type="submit">Submit</Btn>
     </Container>
   );
@@ -47,15 +49,16 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-weight: bold;
-  font-size: 36px;
+  font-size: 2.5rem;
   color: #fff;
   text-shadow: 2px 2px #000;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 `;
 
 const Form = styled.div`
   margin-top: 5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   font-weight: bold;
   width: 100%;
@@ -70,5 +73,15 @@ const Btn = styled.button`
   border-radius: 0.5rem;
   &:hover {
     opacity: 0.7;
+  }
+`;
+
+const Geolocation = styled(Location)`
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.6rem;
+  color: #fff;
+  &:hover {
+    color: #ff0000;
   }
 `;

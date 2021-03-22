@@ -47,7 +47,7 @@ const NavLink = styled(Link)`
   color: white;
   text-decoration: none;
   &:hover {
-    color: grey;
+    color: #808080;
   }
 `;
 

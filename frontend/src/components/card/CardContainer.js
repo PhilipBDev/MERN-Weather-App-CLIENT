@@ -23,6 +23,10 @@ const Card = styled.div`
   box-sizing: border-box;
   border-radius: 1rem;
   background-color: rgba(52, 99, 140, 0.8);
+  transition: transform 0.5s ease;
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 const CardText = styled.h1`
