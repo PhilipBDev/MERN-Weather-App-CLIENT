@@ -6,7 +6,41 @@ import CardContainer from './CardContainer';
 const CardList = () => {
   return (
     <List>
-      <CardContainer />
+      <CardContainer
+        dt={1602104400 * 1000}
+        name="Hickory"
+        icon="01d"
+        main="Clear"
+        temp="22.67"
+      />
+      <CardContainer
+        dt={1602104400 * 1000}
+        name="Hickory"
+        icon="01d"
+        main="Clear"
+        temp="22.67"
+      />
+      <CardContainer
+        dt={1602104400 * 1000}
+        name="Hickory"
+        icon="01d"
+        main="Clear"
+        temp="22.67"
+      />
+      <CardContainer
+        dt={1602104400 * 1000}
+        name="Hickory"
+        icon="01d"
+        main="Clear"
+        temp="22.67"
+      />
+      <CardContainer
+        dt={1602104400 * 1000}
+        name="Hickory"
+        icon="01d"
+        main="Clear"
+        temp="22.67"
+      />
     </List>
   );
 };
@@ -21,7 +55,7 @@ const List = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   margin: 1rem;
   @media (max-height: 400px) {

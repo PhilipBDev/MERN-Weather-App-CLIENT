@@ -3,10 +3,23 @@
 import styled from 'styled-components';
 import LocationForm from '../site/LocationForm';
 
-const CardContainer = () => {
+const CardContainer = ({ name, dt, icon, main, temp }) => {
+  const date = new Date(dt);
+
   return (
     <Card>
-      <CardText>Card</CardText>
+      <CardText>
+        <div>{date.toLocaleDateString()}</div>
+        <div>{name}</div>
+        <div>
+          <img
+            id="icon"
+            src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+          ></img>
+        </div>
+        <div>{main}</div>
+        <div>{temp}°F</div>
+      </CardText>
     </Card>
   );
 };
@@ -21,6 +34,8 @@ const Card = styled.div`
   padding: 1rem;
   border: 1px solid #fff;
   box-sizing: border-box;
+  width: 10rem;
+  height: 16rem;
   border-radius: 1rem;
   background-color: rgba(52, 99, 140, 0.8);
   transition: transform 0.5s ease;
@@ -32,4 +47,5 @@ const Card = styled.div`
 const CardText = styled.h1`
   font-weight: bold;
   color: #fff;
+  font-size: 1.5rem;
 `;

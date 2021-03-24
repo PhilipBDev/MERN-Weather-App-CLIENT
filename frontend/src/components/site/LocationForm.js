@@ -12,7 +12,7 @@ const LocationForm = () => {
   return (
     <Container>
       <Form>
-        <Title>Weather App</Title>
+        <Title>US Weather App</Title>
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -52,7 +52,7 @@ const Title = styled.h1`
   font-size: 2.5rem;
   color: #fff;
   text-shadow: 2px 2px #000;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 1.2rem;
 `;
 

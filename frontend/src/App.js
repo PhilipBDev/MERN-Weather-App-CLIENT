@@ -38,13 +38,13 @@ export default App;
 
 const Background = styled.div`
   background-image: url(${img});
-  background-repeat: no-repeat;
-  background-position: bottom;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
   background-attachment: fixed;
   height: 100vh;
   width: 100vw;
   z-index: 0;
-  overflow: hidden;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 `;
