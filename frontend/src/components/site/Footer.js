@@ -22,11 +22,7 @@ const Foot = styled.footer`
   display: flex;
   justify-content: center;
   font-weight: bold;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 2vh;
-  width: 100%;
+  margin-top: 1.5rem;
 `;
 
 const FooterText = styled.p`

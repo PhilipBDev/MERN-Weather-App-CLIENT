@@ -58,10 +58,4 @@ const List = styled.div`
   justify-content: space-evenly;
   text-align: center;
   margin: 1rem;
-  @media (max-height: 400px) {
-    font-weight: bold;
-    position: fixed;
-    bottom: 10vh;
-    width: 80vw;
-  }
 `;

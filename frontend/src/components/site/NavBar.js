@@ -28,7 +28,8 @@ export default NavBar;
 const Nav = styled.nav`
   display: flex;
   justify-content: center;
-  margin-top: 0.5rem;
+  height: 100%;
+  width: 100%;
   @media (max-width: 500px) {
     padding: 1rem 1.5rem;
   }
@@ -57,7 +58,5 @@ const Li = styled.li`
   font-size: 18px;
   font-weight: 700;
   text-shadow: 1px 1px #000;
-  -webkit-user-select: none;
-  -webkit-tap-highlight-color: transparent;
   user-select: none;
 `;

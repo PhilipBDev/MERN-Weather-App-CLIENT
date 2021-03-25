@@ -42,10 +42,16 @@ const Card = styled.div`
   &:hover {
     transform: scale(1.2);
   }
+  @media (max-height: 400px) {
+    height: 13rem;
+  }
 `;
 
 const CardText = styled.h1`
   font-weight: bold;
   color: #fff;
   font-size: 1.5rem;
+  @media (max-height: 400px) {
+    font-size: 1rem;
+  }
 `;

@@ -12,7 +12,7 @@ const LocationForm = () => {
   return (
     <Container>
       <Form>
-        <Title>US Weather App</Title>
+        <Title>Postal Code Weather</Title>
         <form onSubmit={onSubmit}>
           <input
             type="text"
@@ -39,12 +39,6 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  @media (max-height: 400px) {
-    position: fixed;
-    left: 50%;
-    bottom: 50%;
-    transform: translate(-50%, 0);
-  }
 `;
 
 const Title = styled.h1`
@@ -57,7 +51,7 @@ const Title = styled.h1`
 `;
 
 const Form = styled.div`
-  margin-top: 5rem;
+  margin-top: 2.5rem;
   margin-bottom: 0.5rem;
   text-align: center;
   font-weight: bold;
@@ -72,7 +66,7 @@ const Btn = styled.button`
   border: 1px solid #000;
   border-radius: 0.5rem;
   &:hover {
-    opacity: 0.7;
+    background-color: #808080;
   }
 `;
 
