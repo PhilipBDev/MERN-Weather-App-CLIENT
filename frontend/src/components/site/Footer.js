@@ -19,19 +19,28 @@ export default Footer;
 //===================
 
 const Foot = styled.footer`
-  display: flex;
-  justify-content: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
   font-weight: bold;
-  margin-top: 1.5rem;
+  width: 18rem;
+  margin-top: 2rem;
 `;
 
 const FooterText = styled.p`
   font-weight: bold;
   color: #fff;
+  background-color: rgba(43, 72, 110, 0.8);
+  border-radius: 1rem;
+  padding: 0.3rem;
 `;
 
 const FooterLink = styled.a`
-  color: blue;
+  color: #3884ff;
   text-decoration: none;
   &:hover {
     color: grey;

@@ -2,7 +2,7 @@
 // Location, Image, Temp
 
 import styled from 'styled-components';
-import { Location } from '@styled-icons/evil/Location';
+import { Location } from '@styled-icons/ionicons-sharp/Location';
 
 const LocationForm = () => {
   const onSubmit = (e) => {
@@ -75,7 +75,9 @@ const Geolocation = styled(Location)`
   height: 2.5rem;
   margin-top: 0.6rem;
   color: #fff;
+  stroke: #000;
+  stroke-width: 1rem;
   &:hover {
-    color: #ff0000;
+    color: #808080;
   }
 `;

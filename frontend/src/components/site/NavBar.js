@@ -40,7 +40,7 @@ const Ul = styled.ul`
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(43, 72, 110, 0.7);
   border-radius: 1rem;
 `;
 

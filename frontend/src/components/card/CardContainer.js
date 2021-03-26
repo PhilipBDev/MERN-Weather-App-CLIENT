@@ -9,7 +9,7 @@ const CardContainer = ({ name, dt, icon, main, temp }) => {
   return (
     <Card>
       <CardText>
-        <div>{date.toLocaleDateString()}</div>
+        <SmallCardText>{date.toLocaleDateString()}</SmallCardText>
         <div>{name}</div>
         <div>
           <img
@@ -18,7 +18,7 @@ const CardContainer = ({ name, dt, icon, main, temp }) => {
           ></img>
         </div>
         <div>{main}</div>
-        <div>{temp}°F</div>
+        <SmallCardText>{temp}°F</SmallCardText>
       </CardText>
     </Card>
   );
@@ -45,6 +45,24 @@ const Card = styled.div`
   @media (max-height: 400px) {
     height: 13rem;
   }
+`;
+
+// const Close = styled.div`
+//   position: absolute;
+//   top: 0;
+//   right: 1rem;
+//   color: #fff;
+//   font-size: 1.5rem;
+//   font-weight: bold;
+//   cursor: pointer;
+//   &:hover {
+//     transform: scale(1.5);
+//     color: #ff0000;
+//   }
+// `;
+
+const SmallCardText = styled.div`
+  font-size: 0.7rem;
 `;
 
 const CardText = styled.h1`

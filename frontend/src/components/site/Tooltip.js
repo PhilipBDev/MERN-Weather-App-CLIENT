@@ -3,9 +3,7 @@ import styled from 'styled-components';
 const Tooltip = () => {
   return (
     <ToolWrapper>
-      <ToolBtn>
-        <h3>?</h3>
-      </ToolBtn>
+      <ToolBtn>?</ToolBtn>
       <ToolText>
         <p>
           Outside the US? Please enter the first part of your zip code and
@@ -23,19 +21,31 @@ export default Tooltip;
 // Styled-Components
 //===================
 
-const ToolBtn = styled.div`
+const ToolBtn = styled.button`
   background: #fff;
+  padding: 0;
+  border: none;
   color: #000;
   width: 2rem;
-  text-align: center;
+  height: 2rem;
   border-radius: 1rem;
+  text-align: center;
+  font-weight: bold;
+  &:hover {
+    background-color: #808080;
+  }
 `;
 const ToolText = styled.div`
   position: absolute;
+  right: 3vw;
+  top: 5vh;
   visibility: hidden;
   border-radius: 1rem;
 `;
 const ToolWrapper = styled.div`
+  position: absolute;
+  right: 6vw;
+  top: 3vh;
   & ${ToolBtn}:hover + ${ToolText} {
     visibility: visible;
     color: #fff;
