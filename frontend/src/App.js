@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 import CardList from './components/card/CardList';
 import LocationForm from './components/site/LocationForm';
-import CardContainer from './components/card/CardContainer';
 import Login from './components/user/Login';
 import Register from './components/user/Register';
 import NavBar from './components/site/NavBar';
@@ -22,8 +21,9 @@ const App = () => {
         <Route exact path="/" component={LocationForm} />
         <Route exact path="/" component={CardList} />
         <Route exact path="/" component={Footer} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
+        <Route exact path="/register" component={Tooltip} />
       </Router>
     </>
   );

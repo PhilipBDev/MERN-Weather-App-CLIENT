@@ -1,28 +1,32 @@
 // Card needs to appear with user location after they log in
 
 import styled from 'styled-components';
-import UserWrapper from './UserWrapper';
-import InputStyle from './InputStyle';
+import {
+  UserWrapper,
+  FormTitle,
+  FormHeader,
+  FormBtn,
+  InputStyle,
+} from './StyleForm';
 
 const Login = () => {
   return (
     <UserWrapper>
+      <FormTitle>Login Form</FormTitle>
       <form>
+        <FormHeader>Email: </FormHeader>
         <InputStyle placeholder="Email" type="email" name="email" required />
+        <FormHeader>Password: </FormHeader>
         <InputStyle
           placeholder="Password"
           type="password"
           name="password"
           required
         />
-        <button type="submit">Submit</button>
+        <FormBtn type="submit">Submit</FormBtn>
       </form>
     </UserWrapper>
   );
 };
 
 export default Login;
-
-//===================
-// Styled-Components
-//===================

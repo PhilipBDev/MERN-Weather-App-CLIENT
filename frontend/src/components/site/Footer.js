@@ -28,7 +28,7 @@ const Foot = styled.footer`
   text-align: center;
   font-weight: bold;
   width: 18rem;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 `;
 
 const FooterText = styled.p`

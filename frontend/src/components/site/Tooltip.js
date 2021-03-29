@@ -49,6 +49,7 @@ const ToolWrapper = styled.div`
   & ${ToolBtn}:hover + ${ToolText} {
     visibility: visible;
     color: #fff;
+    text-align: center;
     background-color: rgba(52, 99, 140, 0.8);
     border: 1px solid #fff;
     width: 18rem;

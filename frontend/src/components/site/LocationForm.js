@@ -42,12 +42,16 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
+  width: 30%;
+  border-radius: 1rem;
+  display: inline-block;
   font-weight: bold;
   font-size: 2.5rem;
   color: #fff;
   text-shadow: 2px 2px #000;
+  background-color: rgba(52, 99, 140, 0.2);
   margin-top: 1rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 `;
 
 const Form = styled.div`
