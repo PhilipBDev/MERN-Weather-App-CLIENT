@@ -12,7 +12,7 @@ import {
 const Register = () => {
   return (
     <UserWrapper>
-      <FormTitle>Sign Up Form</FormTitle>
+      <FormTitle>Sign Up</FormTitle>
       <form>
         <FormHeader>First Name: </FormHeader>
         <InputStyle

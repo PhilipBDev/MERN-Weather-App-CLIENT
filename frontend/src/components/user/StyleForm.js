@@ -11,7 +11,7 @@ export const UserWrapper = styled.div`
   border: 1px solid #555555;
   padding: 1rem;
   padding-bottom: 3rem;
-  width: 30%;
+  width: 20rem;
   margin: 0 auto;
   margin-top: 2rem;
   display: flex;

@@ -12,7 +12,7 @@ import {
 const Login = () => {
   return (
     <UserWrapper>
-      <FormTitle>Login Form</FormTitle>
+      <FormTitle>Sign In</FormTitle>
       <form>
         <FormHeader>Email: </FormHeader>
         <InputStyle placeholder="Email" type="email" name="email" required />
