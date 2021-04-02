@@ -1,7 +1,6 @@
 // Layout/Edit/Delete
 
 import styled from 'styled-components';
-import LocationForm from '../site/LocationForm';
 
 const CardContainer = ({ name, dt, icon, main, temp }) => {
   const date = new Date(dt);
@@ -9,6 +8,7 @@ const CardContainer = ({ name, dt, icon, main, temp }) => {
   return (
     <Card>
       <CardText>
+        <Close>X</Close>
         <SmallCardText>{date.toLocaleDateString()}</SmallCardText>
         <div>{name}</div>
         <div>
@@ -31,6 +31,7 @@ export default CardContainer;
 //===================
 
 const Card = styled.div`
+  position: relative;
   padding: 1rem;
   border: 1px solid #fff;
   box-sizing: border-box;
@@ -47,19 +48,19 @@ const Card = styled.div`
   }
 `;
 
-// const Close = styled.div`
-//   position: absolute;
-//   top: 0;
-//   right: 1rem;
-//   color: #fff;
-//   font-size: 1.5rem;
-//   font-weight: bold;
-//   cursor: pointer;
-//   &:hover {
-//     transform: scale(1.5);
-//     color: #ff0000;
-//   }
-// `;
+const Close = styled.div`
+  position: absolute;
+  top: 0.4rem;
+  right: 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.5);
+    color: #ff0000;
+  }
+`;
 
 const SmallCardText = styled.div`
   font-size: 0.7rem;
