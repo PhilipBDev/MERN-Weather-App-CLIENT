@@ -52,6 +52,9 @@ const Title = styled.h1`
   background-color: rgba(52, 99, 140, 0.2);
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  @media (max-width: 500px) {
+    width: 30vh;
+  }
 `;
 
 const Form = styled.div`
