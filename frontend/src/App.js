@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import GlobalStyle from './elements/GlobalStyle';
-import styled from 'styled-components';
 
 import CardList from './components/card/CardList';
 import LocationForm from './components/site/LocationForm';
