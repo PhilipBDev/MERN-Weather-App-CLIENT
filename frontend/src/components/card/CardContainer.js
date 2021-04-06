@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-const CardContainer = ({ name, dt, icon, main, temp }) => {
+const CardContainer = ({ name, dt, icon, currentWeather, temp }) => {
   const date = new Date(dt);
 
   return (
@@ -17,7 +17,7 @@ const CardContainer = ({ name, dt, icon, main, temp }) => {
             src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
           ></img>
         </div>
-        <div>{main}</div>
+        <div>{currentWeather}</div>
         <SmallCardText>{temp}°F</SmallCardText>
       </CardText>
     </Card>
