@@ -36,7 +36,7 @@ const Card = styled.div`
   border: 1px solid #fff;
   box-sizing: border-box;
   width: 10rem;
-  height: 16rem;
+  height: 17rem;
   border-radius: 1rem;
   background-color: rgba(52, 99, 140, 0.8);
   transition: transform 0.5s ease;
@@ -64,6 +64,7 @@ const Close = styled.div`
 
 const SmallCardText = styled.div`
   font-size: 0.7rem;
+  margin-bottom: 0.5rem;
 `;
 
 const CardText = styled.h1`

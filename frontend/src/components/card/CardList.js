@@ -2,34 +2,31 @@
 
 import styled from 'styled-components';
 import CardContainer from './CardContainer';
+import { useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 
 const WEATHER_URL = process.env.REACT_APP_WEATHER_URL;
 const WEATHER_API = process.env.REACT_APP_WEATHER_API;
 
+const url = `${WEATHER_URL}/weather?q=West+Palm+Beach&appid=${WEATHER_API}&units=imperial`;
+
 const CardList = () => {
-  const [isLoading, weather, error] = useFetch(
-    `${WEATHER_URL}/weather?q=Charlotte&appid=${WEATHER_API}`
-  );
+  const [delay, setDelay] = useState(3000);
+  const { value, isLoading, error } = useFetch({ url });
 
-  // if (isLoading) {
-  //   return <p>Data is loading...</p>;
-  // }
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
 
-  // if (error) {
-  //   return <p>Error yo</p>;
-  // }
-
-  console.log(weather.data.weather[0].main);
+  console.log(value);
 
   return (
     <List>
       <CardContainer
-        dt={1602104400 * 1000}
-        name="Hickory"
-        icon="01d"
-        currentWeather="{weather.weather[0].main}"
-        temp="22.67"
+        dt={value.dt * 1000}
+        name={value.name}
+        icon={value.weather[0].icon}
+        currentWeather={value.weather[0].main}
+        temp={value.main.temp}
       />
       <CardContainer
         dt={1602104400 * 1000}
