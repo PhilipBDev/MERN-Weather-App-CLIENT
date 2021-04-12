@@ -2,18 +2,17 @@
 
 import styled from 'styled-components';
 
-const CardContainer = ({ name, dt, icon, currentWeather, temp }) => {
-  const date = new Date(dt);
-
+const CardContainer = ({ name, country, icon, currentWeather, temp }) => {
   return (
     <Card>
       <CardText>
         <Close>X</Close>
-        <SmallCardText>{date.toLocaleDateString()}</SmallCardText>
+        <SmallCardText>{country}</SmallCardText>
         <div>{name}</div>
         <div>
           <img
             id="icon"
+            alt="icon"
             src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
           ></img>
         </div>
@@ -36,7 +35,7 @@ const Card = styled.div`
   border: 1px solid #fff;
   box-sizing: border-box;
   width: 10rem;
-  height: 17rem;
+  height: 15.5rem;
   border-radius: 1rem;
   background-color: rgba(52, 99, 140, 0.8);
   transition: transform 0.5s ease;
@@ -64,7 +63,6 @@ const Close = styled.div`
 
 const SmallCardText = styled.div`
   font-size: 0.7rem;
-  margin-bottom: 0.5rem;
 `;
 
 const CardText = styled.h1`

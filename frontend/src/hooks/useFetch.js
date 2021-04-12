@@ -47,7 +47,7 @@ function useFetch({
 
   useEffect(() => {
     requestData();
-  }, [url]);
+  }, [url, requestData]);
 
   useInterval(requestData, delay);
 

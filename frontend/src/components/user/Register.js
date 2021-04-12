@@ -1,6 +1,5 @@
 // Register to automatically show your weather!
 
-import styled from 'styled-components';
 import {
   UserWrapper,
   FormTitle,

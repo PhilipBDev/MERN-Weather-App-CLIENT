@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { useState, createContext } from 'react';
 
 import GlobalStyle from './elements/GlobalStyle';
-import styled from 'styled-components';
 
 import CardList from './components/card/CardList';
 import LocationForm from './components/site/LocationForm';
@@ -11,9 +11,13 @@ import NavBar from './components/site/NavBar';
 import Footer from './components/site/Footer';
 import Tooltip from './components/site/Tooltip';
 
+export const LinkContext = createContext();
+
 const App = () => {
+  const [url, setUrl] = useState();
+
   return (
-    <>
+    <LinkContext.Provider value={(url, setUrl)}>
       <GlobalStyle />
       <Router>
         <NavBar />
@@ -25,7 +29,7 @@ const App = () => {
         <Route exact path="/register" component={Register} />
         <Route exact path="/register" component={Tooltip} />
       </Router>
-    </>
+    </LinkContext.Provider>
   );
 };
 

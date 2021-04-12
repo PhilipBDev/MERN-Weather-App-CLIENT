@@ -1,28 +1,44 @@
 // Insert ZIP or city. Geolocation.
 // Location, Image, Temp
 
+import { useState, useContext } from 'react';
 import styled from 'styled-components';
+import { LinkContext } from '../../App';
 import { Location } from '@styled-icons/ionicons-sharp/Location';
 
+const WEATHER_URL = process.env.REACT_APP_WEATHER_URL;
+const WEATHER_API = process.env.REACT_APP_WEATHER_API;
+
 const LocationForm = () => {
-  const onSubmit = (e) => {
-    // e.preventDefault();
+  const setUrl = useContext(LinkContext);
+  const [city, setCity] = useState('');
+  console.log(city);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setUrl(
+      `${WEATHER_URL}/weather?q=${city}&appid=${WEATHER_API}&units=imperial`
+    );
   };
 
   return (
     <Container>
       <Form>
         <Title>Postal Code Weather</Title>
-        <form onSubmit={onSubmit}>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="location"
             placeholder="Type zip code or city here.."
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
           />
         </form>
       </Form>
       <Geolocation></Geolocation>
-      <Btn type="submit">Submit</Btn>
+      <Btn type="submit" onClick={handleSubmit}>
+        Submit
+      </Btn>
     </Container>
   );
 };

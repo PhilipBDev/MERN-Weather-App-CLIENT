@@ -1,6 +1,5 @@
 // Card needs to appear with user location after they log in
 
-import styled from 'styled-components';
 import {
   UserWrapper,
   FormTitle,
