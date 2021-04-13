@@ -7,8 +7,7 @@ import useFetch from '../../hooks/useFetch';
 import { LinkContext } from '../../App';
 
 const CardList = () => {
-  const url = useContext(LinkContext);
-
+  const { url } = useContext(LinkContext);
   const { value, isLoading, error, requestData } = useFetch({ url });
 
   if (isLoading) return <p>Loading...</p>;
@@ -18,6 +17,7 @@ const CardList = () => {
   return (
     <List>
       <CardContainer
+        country={value.sys.country}
         name={value.name}
         icon={value.weather[0].icon}
         currentWeather={value.weather[0].main}

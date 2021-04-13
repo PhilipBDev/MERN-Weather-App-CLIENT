@@ -15,9 +15,10 @@ export const LinkContext = createContext();
 
 const App = () => {
   const [url, setUrl] = useState();
+  console.log(url);
 
   return (
-    <LinkContext.Provider value={(url, setUrl)}>
+    <LinkContext.Provider value={{ url, setUrl }}>
       <GlobalStyle />
       <Router>
         <NavBar />

@@ -10,12 +10,12 @@ const WEATHER_URL = process.env.REACT_APP_WEATHER_URL;
 const WEATHER_API = process.env.REACT_APP_WEATHER_API;
 
 const LocationForm = () => {
-  const setUrl = useContext(LinkContext);
+  const { setUrl } = useContext(LinkContext);
   const [city, setCity] = useState('');
-  console.log(city);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(city);
     setUrl(
       `${WEATHER_URL}/weather?q=${city}&appid=${WEATHER_API}&units=imperial`
     );
