@@ -1,57 +1,36 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
-async function parseToJSON(response) {
-  return await response.json();
-}
-
-function useInterval(callback, delay) {
-  const savedCallback = useRef();
-
-  useEffect(() => {
-    savedCallback.current = callback;
-  });
-
-  useEffect(() => {
-    function tick() {
-      savedCallback.current();
-    }
-    if (delay) {
-      let id = setInterval(tick, delay);
-      return () => clearInterval(id);
-    }
-  }, [delay]);
-}
-
-function useFetch({
-  url,
-  delay,
-  options,
-  fetchFn = window.fetch,
-  parseFn = parseToJSON,
-}) {
-  const [value, setValue] = useState(null);
+const useFetch = ({ url }) => {
+  // create state variables
+  const [data, setData] = useState(null);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  async function requestData() {
-    try {
-      const response = await fetchFn(url, options);
-      const value = await parseFn(response);
-      setValue(value);
-      setIsLoading(false);
-    } catch (error) {
-      setError(error);
-      setIsLoading(false);
-    }
-  }
+  const [isLoading, setIsLoading] = useState(null);
 
   useEffect(() => {
-    requestData();
-  }, [url, requestData]);
+    if (!url) return;
+    setIsLoading(true);
+    // clear old search
+    setData(null);
+    setError(null);
 
-  useInterval(requestData, delay);
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        // error handling for nonexistent data
+        setIsLoading(false);
+        if (data.cod >= 400) {
+          setError(data.message);
+          return;
+        }
+        setData(data);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        setError(error);
+      });
+  }, [url]);
 
-  return { value, isLoading, error, requestData };
-}
+  return { data, error, isLoading };
+};
 
 export default useFetch;

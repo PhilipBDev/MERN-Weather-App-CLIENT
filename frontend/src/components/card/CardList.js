@@ -2,26 +2,18 @@
 
 import styled from 'styled-components';
 import CardContainer from './CardContainer';
-import { useContext } from 'react';
-import useFetch from '../../hooks/useFetch';
-import { LinkContext } from '../../App';
 
-const CardList = () => {
-  const { url } = useContext(LinkContext);
-  const { value, isLoading, error, requestData } = useFetch({ url });
-
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>[error]</p>;
-  console.log(error);
+const CardList = (data) => {
+  // console.log(data);
 
   return (
     <List>
       <CardContainer
-        country={value.sys.country}
-        name={value.name}
-        icon={value.weather[0].icon}
-        currentWeather={value.weather[0].main}
-        temp={value.main.temp}
+        country={data.data.sys.country}
+        name={data.data.name}
+        icon={data.data.weather[0].icon}
+        currentWeather={data.data.weather[0].main}
+        temp={data.data.main.temp}
       />
     </List>
   );

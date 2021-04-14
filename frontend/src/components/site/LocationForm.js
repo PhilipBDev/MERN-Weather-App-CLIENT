@@ -15,7 +15,7 @@ const LocationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(city);
+    // console.log(city);
     setUrl(
       `${WEATHER_URL}/weather?q=${city}&appid=${WEATHER_API}&units=imperial`
     );

@@ -10,12 +10,27 @@ import Register from './components/user/Register';
 import NavBar from './components/site/NavBar';
 import Footer from './components/site/Footer';
 import Tooltip from './components/site/Tooltip';
+import useFetch from './hooks/useFetch';
 
 export const LinkContext = createContext();
 
 const App = () => {
   const [url, setUrl] = useState();
-  console.log(url);
+
+  const { data, error, isLoading } = useFetch({ url });
+  // console.log(url);
+  // console.log(data);
+
+  const getContent = () => {
+    if (error) return <h2>Error when fetching: {error}</h2>;
+    if (!data && isLoading) return <h2>LOADING...</h2>;
+    if (!data) return null;
+    return (
+      <Route exact path="/">
+        <CardList data={data} />
+      </Route>
+    );
+  };
 
   return (
     <LinkContext.Provider value={{ url, setUrl }}>
@@ -24,7 +39,7 @@ const App = () => {
         <NavBar />
         <Route exact path="/" component={Tooltip} />
         <Route exact path="/" component={LocationForm} />
-        <Route exact path="/" component={CardList} />
+        {getContent()}
         <Route exact path="/" component={Footer} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />

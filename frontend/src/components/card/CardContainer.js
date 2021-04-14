@@ -35,7 +35,7 @@ const Card = styled.div`
   border: 1px solid #fff;
   box-sizing: border-box;
   width: 10rem;
-  height: 15.5rem;
+  height: 16.2rem;
   border-radius: 1rem;
   background-color: rgba(52, 99, 140, 0.8);
   transition: transform 0.5s ease;
