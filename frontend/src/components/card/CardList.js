@@ -21,9 +21,9 @@ const CardList = (data) => {
 
 export default CardList;
 
-//===================
+//~~~~~~~~~~~~~~~~~~~
 // Styled-Components
-//===================
+//~~~~~~~~~~~~~~~~~~~
 
 const List = styled.div`
   display: flex;

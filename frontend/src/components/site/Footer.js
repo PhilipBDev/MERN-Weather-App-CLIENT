@@ -6,7 +6,7 @@ const Footer = () => {
       <FooterText>
         &copy; 2021{' '}
         <FooterLink href="https://github.com/PhilipBDev">PhilipBDev</FooterLink>{' '}
-        Weather App
+        City Weather Fetcher
       </FooterText>
     </Foot>
   );
@@ -14,9 +14,9 @@ const Footer = () => {
 
 export default Footer;
 
-//===================
+//~~~~~~~~~~~~~~~~~~~
 // Styled-Components
-//===================
+//~~~~~~~~~~~~~~~~~~~
 
 const Foot = styled.footer`
   position: relative;
@@ -27,7 +27,7 @@ const Foot = styled.footer`
   right: 0;
   text-align: center;
   font-weight: bold;
-  width: 18rem;
+  width: 20rem;
   margin-top: 1.8rem;
 `;
 

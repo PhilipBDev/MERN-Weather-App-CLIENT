@@ -21,9 +21,9 @@ const NavBar = () => {
 
 export default NavBar;
 
-//===================
+//~~~~~~~~~~~~~~~~~~~
 // Styled-Components
-//===================
+//~~~~~~~~~~~~~~~~~~~
 
 const Nav = styled.nav`
   display: flex;

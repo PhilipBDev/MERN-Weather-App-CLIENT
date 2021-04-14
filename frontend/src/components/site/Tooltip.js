@@ -6,9 +6,8 @@ const Tooltip = () => {
       <ToolBtn>?</ToolBtn>
       <ToolText>
         <p>
-          Outside the US? Please enter the first part of your zip code and
-          2-letter country code -- ex. EC1A,GB for London or 10115,DE for
-          Berlin.
+          Register to have your city show up automatically! You can only have 5
+          cards displaying at one time.
         </p>
       </ToolText>
     </ToolWrapper>
@@ -17,9 +16,9 @@ const Tooltip = () => {
 
 export default Tooltip;
 
-//===================
+//~~~~~~~~~~~~~~~~~~~
 // Styled-Components
-//===================
+//~~~~~~~~~~~~~~~~~~~
 
 const ToolBtn = styled.button`
   background: #fff;

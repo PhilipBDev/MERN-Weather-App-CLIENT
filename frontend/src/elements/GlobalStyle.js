@@ -1,3 +1,7 @@
+//~~~~~~~~~~~~~~~~~~~
+// Styled-Components
+//~~~~~~~~~~~~~~~~~~~
+
 import { createGlobalStyle } from 'styled-components';
 import img from '../images/background.jpg';
 

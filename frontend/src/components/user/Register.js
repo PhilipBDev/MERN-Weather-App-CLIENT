@@ -20,13 +20,8 @@ const Register = () => {
           name="firstName"
           required
         />
-        <FormHeader>Postal Code: </FormHeader>
-        <InputStyle
-          placeholder="Postal Code"
-          type="text"
-          name="postalCode"
-          required
-        />
+        <FormHeader>City: </FormHeader>
+        <InputStyle placeholder="City" type="text" name="city" required />
         <FormHeader>Email: </FormHeader>
         <InputStyle placeholder="Email" type="email" name="email" required />
         <FormHeader>Password: </FormHeader>

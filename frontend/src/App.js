@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { useState, createContext } from 'react';
 
 import GlobalStyle from './elements/GlobalStyle';
+import styled from 'styled-components';
 
 import CardList from './components/card/CardList';
 import LocationForm from './components/site/LocationForm';
@@ -22,8 +23,8 @@ const App = () => {
   // console.log(data);
 
   const getContent = () => {
-    if (error) return <h2>Error when fetching: {error}</h2>;
-    if (!data && isLoading) return <h2>LOADING...</h2>;
+    if (error) return <StyleApi>Error when fetching: {error}</StyleApi>;
+    if (!data && isLoading) return <StyleApi>LOADING...</StyleApi>;
     if (!data) return null;
     return (
       <Route exact path="/">
@@ -50,3 +51,16 @@ const App = () => {
 };
 
 export default App;
+
+//~~~~~~~~~~~~~~~~~~~
+// Styled-Components
+//~~~~~~~~~~~~~~~~~~~
+
+const StyleApi = styled.h2`
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  background-color: rgba(52, 99, 140, 0.2);
+  text-align: center;
+`;

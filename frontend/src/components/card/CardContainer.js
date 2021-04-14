@@ -25,9 +25,9 @@ const CardContainer = ({ name, country, icon, currentWeather, temp }) => {
 
 export default CardContainer;
 
-//===================
+//~~~~~~~~~~~~~~~~~~~
 // Styled-Components
-//===================
+//~~~~~~~~~~~~~~~~~~~
 
 const Card = styled.div`
   position: relative;

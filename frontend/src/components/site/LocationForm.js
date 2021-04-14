@@ -4,7 +4,7 @@
 import { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { LinkContext } from '../../App';
-import { Location } from '@styled-icons/ionicons-sharp/Location';
+import Geolocation from './Geolocation';
 
 const WEATHER_URL = process.env.REACT_APP_WEATHER_URL;
 const WEATHER_API = process.env.REACT_APP_WEATHER_API;
@@ -24,18 +24,18 @@ const LocationForm = () => {
   return (
     <Container>
       <Form>
-        <Title>Postal Code Weather</Title>
+        <Title>City Weather Fetcher</Title>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="location"
-            placeholder="Type zip code or city here.."
+            placeholder="Type city here.."
             value={city}
             onChange={(e) => setCity(e.target.value)}
           />
         </form>
       </Form>
-      <Geolocation></Geolocation>
+      <Geolocation />
       <Btn type="submit" onClick={handleSubmit}>
         Submit
       </Btn>
@@ -45,9 +45,9 @@ const LocationForm = () => {
 
 export default LocationForm;
 
-//===================
+//~~~~~~~~~~~~~~~~~~~
 // Styled-Components
-//===================
+//~~~~~~~~~~~~~~~~~~~
 
 const Container = styled.div`
   display: flex;
@@ -87,17 +87,5 @@ const Btn = styled.button`
   border-radius: 0.5rem;
   &:hover {
     background-color: #808080;
-  }
-`;
-
-const Geolocation = styled(Location)`
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-top: 0.6rem;
-  color: #fff;
-  stroke: #000;
-  stroke-width: 1rem;
-  &:hover {
-    color: #808080;
   }
 `;
