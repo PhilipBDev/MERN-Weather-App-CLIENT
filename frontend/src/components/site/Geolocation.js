@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { LinkContext } from '../../App';
 import { Location } from '@styled-icons/ionicons-sharp/Location';
@@ -15,11 +15,9 @@ const Geolocation = () => {
 
   const url = geolink;
 
-  console.log(geolink);
-  const { data, error, isLoading } = useFetch({ url });
-  console.log(data.results[0].address_components[2].long_name);
+  const { data } = useFetch({ url });
 
-  const watchID = (e) => {
+  const fetchGeo = (e) => {
     navigator.geolocation.watchPosition((position) => {
       let longitude = position.coords.longitude;
       let latitude = position.coords.latitude;
@@ -30,28 +28,27 @@ const Geolocation = () => {
     });
   };
 
-  console.log();
-  //   console.log(data.results[0].address_components[2].long_name);
+  fetchGeo();
 
-  const fetchGeo = () => {
-    watchID();
-    setCity(data.data.results[0].address_components[2].long_name);
-    setUrl(
-      `${WEATHER_URL}/weather?q=${city}&appid=${WEATHER_API}&units=imperial`
-    );
+  const getContent = (e) => {
+    // console.log(data.results[0].address_components[2].long_name);
+    setCity(data.results[0].address_components[2].long_name);
   };
 
-  //   const getContent = (e) => {
-  // if (error) return <StyleApi>Error when fetching: error</StyleApi>;
-  // if (!data && isLoading) return <StyleApi>LOADING...</StyleApi>;
-  // if (!data) return null;
+  useEffect(() => {
+    if (city) {
+      setUrl(
+        `${WEATHER_URL}/weather?q=${city}&appid=${WEATHER_API}&units=imperial`
+      );
+      setCity('');
+    }
+  }, [city, setUrl]);
 
-  // console.log('hello');
-
-  // return watchID();
-  //   };
-
-  return <GeolocationBtn type="submit" onClick={watchID}></GeolocationBtn>;
+  return (
+    <>
+      <GeolocationBtn type="submit" onClick={getContent}></GeolocationBtn>
+    </>
+  );
 };
 
 export default Geolocation;
@@ -70,13 +67,4 @@ const GeolocationBtn = styled(Location)`
   &:hover {
     color: #808080;
   }
-`;
-
-const StyleApi = styled.h2`
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: #fff;
-  text-shadow: 2px 2px #000;
-  background-color: rgba(52, 99, 140, 0.2);
-  text-align: center;
 `;

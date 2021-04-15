@@ -1,7 +1,7 @@
 // Insert ZIP or city. Geolocation.
 // Location, Image, Temp
 
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { LinkContext } from '../../App';
 import Geolocation from './Geolocation';
@@ -19,6 +19,7 @@ const LocationForm = () => {
     setUrl(
       `${WEATHER_URL}/weather?q=${city}&appid=${WEATHER_API}&units=imperial`
     );
+    setCity('');
   };
 
   return (
