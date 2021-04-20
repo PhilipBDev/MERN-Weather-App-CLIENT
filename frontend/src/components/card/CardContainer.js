@@ -6,7 +6,7 @@ const CardContainer = ({ name, country, icon, currentWeather, temp }) => {
   return (
     <Card>
       <CardText>
-        <Close>X</Close>
+        {/* <Close>X</Close> */}
         <SmallCardText>{country}</SmallCardText>
         <div>{name}</div>
         <div>
@@ -47,19 +47,19 @@ const Card = styled.div`
   }
 `;
 
-const Close = styled.div`
-  position: absolute;
-  top: 0.4rem;
-  right: 0.5rem;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.5);
-    color: #ff0000;
-  }
-`;
+// const Close = styled.div`
+//   position: absolute;
+//   top: 0.4rem;
+//   right: 0.5rem;
+//   color: #fff;
+//   font-size: 1rem;
+//   font-weight: bold;
+//   cursor: pointer;
+//   &:hover {
+//     transform: scale(1.5);
+//     color: #ff0000;
+//   }
+// `;
 
 const SmallCardText = styled.div`
   font-size: 0.7rem;

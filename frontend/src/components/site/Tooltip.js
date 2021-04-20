@@ -5,10 +5,7 @@ const Tooltip = () => {
     <ToolWrapper>
       <ToolBtn>?</ToolBtn>
       <ToolText>
-        <p>
-          Register to have your city show up automatically! You can only have 5
-          cards displaying at one time.
-        </p>
+        <p>Register to have your city show up automatically!</p>
       </ToolText>
     </ToolWrapper>
   );
