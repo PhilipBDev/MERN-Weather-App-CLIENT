@@ -19,8 +19,6 @@ const App = () => {
   const [url, setUrl] = useState();
 
   const { data, error, isLoading } = useFetch({ url });
-  // console.log(url);
-  // console.log(data);
 
   const getContent = () => {
     if (error) return <StyleApi>Error when fetching: {error}</StyleApi>;

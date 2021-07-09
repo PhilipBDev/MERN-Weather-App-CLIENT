@@ -32,9 +32,10 @@ export default CardContainer;
 const Card = styled.div`
   position: relative;
   padding: 1rem;
+  text-align: center;
   border: 1px solid #fff;
   box-sizing: border-box;
-  width: 10rem;
+  width: 11rem;
   height: 16.2rem;
   border-radius: 1rem;
   background-color: rgba(52, 99, 140, 0.8);

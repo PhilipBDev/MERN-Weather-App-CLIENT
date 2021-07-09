@@ -1,10 +1,9 @@
 // Insert ZIP or city. Geolocation.
 // Location, Image, Temp
 
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { LinkContext } from '../../App';
-import Geolocation from './Geolocation';
 
 const WEATHER_URL = process.env.REACT_APP_WEATHER_URL;
 const WEATHER_API = process.env.REACT_APP_WEATHER_API;
@@ -15,7 +14,6 @@ const LocationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(city);
     setUrl(
       `${WEATHER_URL}/weather?q=${city}&appid=${WEATHER_API}&units=imperial`
     );
@@ -25,7 +23,7 @@ const LocationForm = () => {
   return (
     <Container>
       <Form>
-        <Title>City Weather Fetcher</Title>
+        <Title>City Weather</Title>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -36,7 +34,6 @@ const LocationForm = () => {
           />
         </form>
       </Form>
-      <Geolocation />
       <Btn type="submit" onClick={handleSubmit}>
         Submit
       </Btn>
@@ -59,7 +56,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  width: 30%;
+  width: 20%;
   border-radius: 1rem;
   display: inline-block;
   font-weight: bold;

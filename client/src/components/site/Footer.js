@@ -6,7 +6,7 @@ const Footer = () => {
       <FooterText>
         &copy; 2021{' '}
         <FooterLink href="https://github.com/PhilipBDev">PhilipBDev</FooterLink>{' '}
-        City Weather Fetcher
+        City Weather
       </FooterText>
     </Foot>
   );
