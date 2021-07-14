@@ -12,6 +12,10 @@ import NavBar from './components/site/NavBar';
 import Footer from './components/site/Footer';
 import Tooltip from './components/site/Tooltip';
 import useFetch from './hooks/useFetch';
+import { UserContextProvider } from './context/UserContext';
+import Axios from 'axios';
+
+Axios.defaults.withCredentials = true;
 
 export const LinkContext = createContext();
 
@@ -32,19 +36,21 @@ const App = () => {
   };
 
   return (
-    <LinkContext.Provider value={{ url, setUrl }}>
-      <GlobalStyle />
-      <Router>
-        <NavBar />
-        <Route exact path="/" component={Tooltip} />
-        <Route exact path="/" component={LocationForm} />
-        {getContent()}
-        <Route exact path="/" component={Footer} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/register" component={Tooltip} />
-      </Router>
-    </LinkContext.Provider>
+    <UserContextProvider>
+      <LinkContext.Provider value={{ url, setUrl }}>
+        <GlobalStyle />
+        <Router>
+          <NavBar />
+          <Route exact path="/" component={Tooltip} />
+          <Route exact path="/" component={LocationForm} />
+          {getContent()}
+          <Route exact path="/" component={Footer} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/register" component={Tooltip} />
+        </Router>
+      </LinkContext.Provider>
+    </UserContextProvider>
   );
 };
 
