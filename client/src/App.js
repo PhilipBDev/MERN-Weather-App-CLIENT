@@ -12,9 +12,10 @@ import NavBar from './components/site/NavBar';
 import Footer from './components/site/Footer';
 import Tooltip from './components/site/Tooltip';
 import useFetch from './hooks/useFetch';
-import { UserContextProvider } from './context/UserContext';
+import { UserContextProvider } from './components/context/UserContext';
 import Axios from 'axios';
 
+// Default Header
 Axios.defaults.withCredentials = true;
 
 export const LinkContext = createContext();

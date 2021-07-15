@@ -1,12 +1,22 @@
 import styled from 'styled-components';
+import React, { useContext } from 'react';
+import UserContext from '../context/UserContext';
 
 const Tooltip = () => {
+  const { user } = useContext(UserContext);
+
   return (
     <ToolWrapper>
-      <ToolBtn>?</ToolBtn>
-      <ToolText>
-        <p>Register to have your city show up automatically!</p>
-      </ToolText>
+      {user === null ? (
+        <>
+          <ToolBtn>?</ToolBtn>
+          <ToolText>
+            <p>Register to have your city show up automatically!</p>
+          </ToolText>
+        </>
+      ) : (
+        user && ''
+      )}
     </ToolWrapper>
   );
 };

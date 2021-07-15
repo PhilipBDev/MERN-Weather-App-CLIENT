@@ -1,19 +1,42 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Axios from 'axios';
+import { useContext } from 'react';
+import UserContext from '../context/UserContext';
+import domain from '../../util/domain';
 
 const NavBar = () => {
+  const { user, getUser } = useContext(UserContext);
+
+  async function logOut() {
+    await Axios.get(`${domain}/auth/logOut`);
+    await getUser();
+  }
+
   return (
     <Nav>
       <Ul>
-        <Li>
-          <NavLink to="/">Home</NavLink>
-        </Li>
-        <Li>
-          <NavLink to="/login">Login</NavLink>
-        </Li>
-        <Li>
-          <NavLink to="/register">Register</NavLink>
-        </Li>
+        {user === null ? (
+          <>
+            <Li>
+              <NavLink to="/">Home</NavLink>
+            </Li>
+            <Li>
+              <NavLink to="/login">Login</NavLink>
+            </Li>
+            <Li>
+              <NavLink to="/register">Register</NavLink>
+            </Li>
+          </>
+        ) : (
+          user && (
+            <Li>
+              <NavLink to="/" onClick={logOut}>
+                Log out
+              </NavLink>
+            </Li>
+          )
+        )}
       </Ul>
     </Nav>
   );

@@ -54,3 +54,12 @@ export const FormBtn = styled.button`
     background-color: #808080;
   }
 `;
+
+export const FormLink = styled.h3`
+  font-weight: bold;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 3rem;
+  margin-bottom: 0.3rem;
+  text-decoration: none;
+`;
