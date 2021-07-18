@@ -125,6 +125,7 @@ router.post('/login', async (req, res) => {
             ? false
             : process.env.NODE_ENV === 'production' && true,
       })
+      .json(existingUser.city)
       .send();
   } catch (err) {
     res.status(500).send();

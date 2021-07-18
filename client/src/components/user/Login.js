@@ -4,6 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import UserContext from '../context/UserContext';
 import domain from '../../util/domain';
 import ErrorMessage from '../../util/ErrorMessage';
+import { LinkContext } from '../../App';
 
 import {
   UserWrapper,
@@ -14,10 +15,15 @@ import {
   InputStyle,
 } from './StyleForm';
 
+const WEATHER_URL = process.env.REACT_APP_WEATHER_URL;
+const WEATHER_API = process.env.REACT_APP_WEATHER_API;
+
 const Login = () => {
   const [formEmail, setFormEmail] = useState('');
   const [formPassword, setFormPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState(null);
+  const [city, setCity] = useState('');
+  const { setUrl } = useContext(LinkContext);
 
   const { getUser } = useContext(UserContext);
 
@@ -32,7 +38,8 @@ const Login = () => {
     };
 
     try {
-      await Axios.post(`${domain}/auth/login`, loginData);
+      const userData = await Axios.post(`${domain}/auth/login`, loginData);
+      setCity(userData.data);
     } catch (err) {
       if (err.response) {
         if (err.response.data.errorMessage) {
@@ -43,8 +50,13 @@ const Login = () => {
     }
 
     await getUser();
+
     history.push('/');
   }
+
+  setUrl(
+    `${WEATHER_URL}/weather?q=${city}&appid=${WEATHER_API}&units=imperial`
+  );
 
   return (
     <UserWrapper>
