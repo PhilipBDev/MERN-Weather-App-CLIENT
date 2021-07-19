@@ -22,7 +22,6 @@ const Login = () => {
   const [formEmail, setFormEmail] = useState('');
   const [formPassword, setFormPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState(null);
-  const [city, setCity] = useState('');
   const { setUrl } = useContext(LinkContext);
 
   const { getUser } = useContext(UserContext);
@@ -39,7 +38,9 @@ const Login = () => {
 
     try {
       const userData = await Axios.post(`${domain}/auth/login`, loginData);
-      setCity(userData.data);
+      setUrl(
+        `${WEATHER_URL}/weather?q=${userData.data}&appid=${WEATHER_API}&units=imperial`
+      );
     } catch (err) {
       if (err.response) {
         if (err.response.data.errorMessage) {
@@ -53,10 +54,6 @@ const Login = () => {
 
     history.push('/');
   }
-
-  setUrl(
-    `${WEATHER_URL}/weather?q=${city}&appid=${WEATHER_API}&units=imperial`
-  );
 
   return (
     <UserWrapper>

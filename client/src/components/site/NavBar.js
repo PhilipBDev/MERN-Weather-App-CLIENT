@@ -11,6 +11,7 @@ const NavBar = () => {
   async function logOut() {
     await Axios.get(`${domain}/auth/logOut`);
     await getUser();
+    window.location.reload();
   }
 
   return (

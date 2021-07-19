@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
   try {
     const { email, password, passwordVerify, city } = req.body;
 
-    // validation
+    // Validation
 
     if (!email || !password || !passwordVerify || !city)
       return res.status(400).json({
@@ -21,10 +21,10 @@ router.post('/', async (req, res) => {
 
     if (password !== passwordVerify)
       return res.status(400).json({
-        errorMessage: 'Please enter the same twice for verification.',
+        errorMessage: 'Please enter the same password twice for verification.',
       });
 
-    // make sure no account exists for this email
+    // Existing eMail
 
     const existingUser = await User.findOne({ email });
     if (existingUser)
@@ -32,12 +32,12 @@ router.post('/', async (req, res) => {
         errorMessage: 'An account with this email already exists.',
       });
 
-    // hash the password
+    // Password Hash
 
     const salt = await bcrypt.genSalt();
     const passwordHash = await bcrypt.hash(password, salt);
 
-    // save the user in the database
+    // Save to DB
 
     const newUser = new User({
       email,
@@ -47,7 +47,7 @@ router.post('/', async (req, res) => {
 
     const savedUser = await newUser.save();
 
-    // create a JWT token
+    // Create JWT Token
 
     const token = jwt.sign(
       {
@@ -78,14 +78,14 @@ router.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // validation
+    // Validation
 
     if (!email || !password)
       return res.status(400).json({
         errorMessage: 'Please enter all required fields.',
       });
 
-    // get user account
+    // Get Account
 
     const existingUser = await User.findOne({ email });
 
@@ -104,7 +104,7 @@ router.post('/login', async (req, res) => {
         errorMessage: 'Wrong email or password.',
       });
 
-    // create a JWT token
+    // Create JWT Token
 
     const token = jwt.sign(
       {
