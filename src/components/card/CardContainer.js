@@ -13,7 +13,7 @@ const CardContainer = ({ name, country, icon, currentWeather, temp }) => {
           <img
             id="icon"
             alt="icon"
-            src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+            src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
           ></img>
         </div>
         <div>{currentWeather}</div>
