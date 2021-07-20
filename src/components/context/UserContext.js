@@ -8,6 +8,7 @@ function UserContextProvider(props) {
   const [user, setUser] = useState(undefined);
 
   async function getUser() {
+    console.log({ domain });
     const userRes = await Axios.get(`${domain}/auth/loggedIn`);
     setUser(userRes.data);
   }
