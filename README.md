@@ -2,13 +2,14 @@
 
   <p align="center">
     <br />
-    <a href="https://github.com/PhilipBDev/MERN-Weather-App-CLIENT">View Demo</a>
+    <a href="https://www.myweather.city">View Demo</a>
     ·
     <a href="https://github.com/PhilipBDev/MERN-Weather-App-CLIENT/issues">Report Bug</a>
     ·
     <a href="https://github.com/PhilipBDev/MERN-Weather-App-CLIENT/issues">Request Feature</a>
-  </p>
-</p>
+<br />
+    <a href="hhttps://github.com/PhilipBDev/MERN-Weather-App-SERVER">View Server Repository</a>
+
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
