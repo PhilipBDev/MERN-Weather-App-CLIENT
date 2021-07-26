@@ -12,6 +12,12 @@
     <a href="https://github.com/PhilipBDev/MERN-Weather-App-CLIENT/issues">Request Feature</a>
     </p>
 
+<p align="center">
+  <a href="https://www.myweather.city">
+    <img src="images/preview.png" alt="Logo" width="80" height="80">
+  </a>
+</p>
+
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
