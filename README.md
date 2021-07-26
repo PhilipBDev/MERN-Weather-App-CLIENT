@@ -13,7 +13,9 @@
     </p>
 
 <p align="center">
-    <img src="images/preview.png" alt="Preview">
+  <a href="https://www.myweather.city">
+    <img src="images/preview.png">
+  </a>
 </p>
 
 <!-- TABLE OF CONTENTS -->
