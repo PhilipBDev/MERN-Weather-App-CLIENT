@@ -69,10 +69,17 @@ To get a local copy up and running follow these simple steps.
    git clone https://github.com/PhilipBDev/MERN-Weather-App-CLIENT.git
    ```
 3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Create an ENV file with the following attributes using your own Open Weather API key:
 
-```sh
-npm install
-```
+   ```sh
+   REACT_APP_WEATHER_URL='http://api.openweathermap.org/data/2.5'
+   REACT_APP_WEATHER_API=
+
+   NODE_ENV='development'
+   ```
 
 <!-- ROADMAP -->
 
