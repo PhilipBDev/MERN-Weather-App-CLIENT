@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://www.myweather.city">
-    <img src="images/preview.png" alt="Logo" width="200" height="200">
+    <img src="images/preview.png" alt="Logo" width="500" height="500">
   </a>
 </p>
 
