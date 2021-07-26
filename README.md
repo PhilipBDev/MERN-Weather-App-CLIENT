@@ -7,9 +7,9 @@
     <a href="https://github.com/PhilipBDev/MERN-Weather-App-CLIENT/issues">Report Bug</a>
     ·
     <a href="https://github.com/PhilipBDev/MERN-Weather-App-CLIENT/issues">Request Feature</a>
+    </p>
 <br />
-    <a href="hhttps://github.com/PhilipBDev/MERN-Weather-App-SERVER">View Server Repository</a>
-
+    <a href="https://github.com/PhilipBDev/MERN-Weather-App-SERVER">View Server Repository</a>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
