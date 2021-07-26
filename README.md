@@ -1,4 +1,5 @@
   <h3 align="center">City Weather - Client</h3>
+      <a align="center" href="https://github.com/PhilipBDev/MERN-Weather-App-SERVER">View Server Repository</a>
 
   <p align="center">
     <br />
@@ -8,8 +9,6 @@
     ·
     <a href="https://github.com/PhilipBDev/MERN-Weather-App-CLIENT/issues">Request Feature</a>
     </p>
-<br />
-    <a href="https://github.com/PhilipBDev/MERN-Weather-App-SERVER">View Server Repository</a>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
