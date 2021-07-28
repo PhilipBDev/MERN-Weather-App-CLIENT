@@ -78,7 +78,7 @@ const Register = () => {
         />
         <FormHeader>Email: </FormHeader>
         <InputStyle
-          placeholder="email"
+          placeholder="Email"
           type="email"
           value={formEmail}
           onChange={(e) => setFormEmail(e.target.value)}
