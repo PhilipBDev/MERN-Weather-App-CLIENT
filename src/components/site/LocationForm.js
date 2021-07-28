@@ -70,6 +70,9 @@ const Title = styled.h1`
   @media (max-width: 800px) {
     width: 40%;
   }
+  @media (max-width: 500px) {
+    width: 50%;
+  }
 `;
 
 const Form = styled.div`
