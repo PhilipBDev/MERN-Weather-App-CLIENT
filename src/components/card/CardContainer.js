@@ -36,7 +36,7 @@ const Card = styled.div`
   border: 1px solid #fff;
   box-sizing: border-box;
   width: 11rem;
-  height: 16.2rem;
+  height: 16.5rem;
   border-radius: 1rem;
   background-color: rgba(52, 99, 140, 0.8);
   transition: transform 0.5s ease;
@@ -45,6 +45,9 @@ const Card = styled.div`
   }
   @media (max-height: 400px) {
     height: 13rem;
+  }
+  @media (max-width: 700px) {
+    height: 17.5rem;
   }
 `;
 

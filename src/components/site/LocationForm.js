@@ -58,14 +58,18 @@ const Container = styled.div`
 const Title = styled.h1`
   width: 20%;
   border-radius: 1rem;
-  display: inline-block;
+  display: inline-flex;
   font-weight: bold;
   font-size: 2.5rem;
+  justify-content: center;
   color: #fff;
   text-shadow: 2px 2px #000;
   background-color: rgba(52, 99, 140, 0.2);
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+  @media (max-width: 800px) {
+    width: 40%;
+  }
 `;
 
 const Form = styled.div`
