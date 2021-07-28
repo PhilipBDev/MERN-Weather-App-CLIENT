@@ -4,7 +4,7 @@
 </p>
 
 <p>
-Due to the server running on a free tier of Heroku, please allow roughly 60 seconds for the website to display properly. After about a minute, refresh the page and a navbar should be displayed at the top of the page if everything loaded correctly.
+Due to the server running on a free tier of Heroku, please allow roughly 60 seconds for the website to display properly. After about a minute, refresh the page and the navbar should be displayed at the top of the page.
 </p>
 
   <p align="center">
