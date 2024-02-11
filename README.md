@@ -1,7 +1,7 @@
   <h3 align="center">City Weather - Client</h3>
     <p align="center">
 <a href="https://github.com/PhilipBDev/MERN-Weather-App-SERVER">View Server Repository</a>
-</p>
+</p> 
 
 <p>
 Due to the server running on a free tier of Heroku, please allow roughly 60 seconds for the website to display properly. After about a minute, refresh the page and the navbar should be displayed at the top of the page.
